@@ -1,5 +1,4 @@
-﻿using System;
-
+using System;
 namespace Assignment2Group11
 {
     class Employee
@@ -10,7 +9,7 @@ namespace Assignment2Group11
         private double basicSalary = 2000.00;
         private double grossSales;
         private double commissionRate = 0.2;
-        
+
         public string FirstName
         {
             get { return firstName; }
