@@ -10,6 +10,10 @@ namespace Assignment2Group11
         private double grossSales;
         private double commissionRate = 0.2;
 
+        public int EmployeeUserId 
+        {
+            get { return employeeUserId;}
+        }
         public string FirstName
         {
             get { return firstName; }
@@ -34,6 +38,23 @@ namespace Assignment2Group11
         {
             get { return commissionRate; }
             set { commissionRate = value; }
+        }
+
+        //constructors without parameter
+        public Employee() { }
+
+        //constructors with parameter
+        public Employee(int employeeUserId, string firstName, double basicSalary)
+        {
+            EmployeeUserId = employeeUserId;
+            FirstName = firstName;
+            BasicSalary = basicSalary;
+        }
+
+        public double Earnings()
+        {
+            double totalEarning = (CommissionRate * GrossSales) + BasicSalary;
+            return totalEarning;
         }
     }
 }
